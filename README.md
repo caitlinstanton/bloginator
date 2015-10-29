@@ -1,5 +1,27 @@
 <h1>Bloginator</h1>
 
+TODO:
+ - editUserPostMongo()
+ - 
+<hr> <h1> NEW </h1>
+<ul>
+ <li> <b>Leader</b> : Johnny So </li>
+ <li> <b>UX</b> : Vivian Li </li>
+ <li> <b>Middleware</b> : Darwin Chiu </li>
+ <li> <b>Backend</b> : Ishraq Bhuiyan </li>
+</ul>
+
+<h2> Changelog </h2>
+ - Oct 22
+   - Forked original REPO
+ - Oct 23
+   - Started rewriting some SQLite db methods in Mongo
+      - checkUserMongo(un,pw) ; countUsersMongo() ; addUserMongo()
+ - Oct 25
+   - Added some more Mongo versions of functions in db_methods.py (now missing only editUserPost in Mongo form)
+      - userExistsMongo(username); countPostsMongo() ; getUserIDMongo(username) ; getUsernameMongo(ID) ; addPostMongo(title,post,user) ; editPostMongo(content,BlogID) ; getPostsMongo() ; getUserPostsMongo(username)
+
+<hr> <h1> ORIGINAL </h1>
 <h2>Created by:</h2>
 
 <p>Mark Kharakh <i>Leader</i> </p>

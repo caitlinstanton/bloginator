@@ -23,9 +23,9 @@ def checkUser(username, password):
     conn.close()
 
 def checkUserMongo(username, password):
-    person = db.people.find({'un':username},{"pw":password})
+    person = db.people.find({'un':username},{"_id":False})
     for i in person:
-        return True
+        return person['pw'] == password
     return False
 
 def countUsers():
@@ -55,7 +55,7 @@ def addUser(username, password):
     conn.close()
 
 def addUserMongo(username, password):
-    person = {'un':username,'pw':password,'id':str(countUsersMongo()+1)}
+    person = {'un':username,'pw':password,'id':str(countUsersMongo())+1}
     db.people.insert(person)
 
 def userExists(username):
@@ -171,11 +171,6 @@ def editUserPost(content, BlogID, username):
                 editPost(content, str(counter2))
                 break
 
-def editUserPostMongo(content, BlogID, username):
-    post = db.posts.find({'blogid':BlogID})
-    title = post['title']
-    userid = post['userid']
-    db.posts.update(
 def getPosts():
     conn = sqlite3.connect("blog.db")
     c = conn.cursor()

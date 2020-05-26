@@ -37,5 +37,5 @@ including pages and links in the navigation bar (such as "My Posts" and "Create"
  <li>Run "git clone git@github.com:caitlinstanton/bloginator.git"</li>
  <li>Run "python app.py"</li>
  <li>Go to localhost:8000 in the browser of your choice</li>
+ <li>ENJOY</li>
 </ol>
-6. ENJOY
